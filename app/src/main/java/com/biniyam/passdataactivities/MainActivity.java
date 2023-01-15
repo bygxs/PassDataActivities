@@ -13,8 +13,8 @@ import com.google.android.material.tabs.TabLayout;
 import java.io.Serializable;
 
 public class MainActivity extends AppCompatActivity {
-    String TAG;
-    String NAME_KEY = "NAME";
+    final String TAG = "demo";
+    final static public String NAME_KEY = "NAME";
     final static public String USER_KEY = "USER";
 
 
@@ -33,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,SecondActivity.class);
-                intent.putExtra(NAME_KEY,"Bob Smith");
+               // intent.putExtra(NAME_KEY,"Bob Smith");
                 // a serializable method of an object
-                intent.putExtra(USER_KEY, new User("",22));
+                intent.putExtra(USER_KEY, new User("Bob Smith",24));
                 startActivity(intent);
 
             }
